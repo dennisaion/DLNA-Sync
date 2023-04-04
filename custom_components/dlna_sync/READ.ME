@@ -1,0 +1,15 @@
+Add the custom component to your Home Assistant installation by copying the dlna_sync folder into the custom_components folder in your Home Assistant config directory.
+
+Restart Home Assistant to load the new custom component.
+
+Go to the Home Assistant web interface and navigate to "Configuration" -> "Integrations". Click the "+" button in the bottom right corner to add a new integration.
+
+Search for "DLNA Sync" and select it from the list of integrations.
+
+Enter the file path to the media file you want to play and the MIME type of the file.
+
+Once the integration is added, you should see a new media player entity in the Home Assistant interface. You can use this entity to control playback on all of the DLNA renderers in your network that support the specified MIME type.
+
+Start playback by selecting the media player entity and clicking the "Play" button. Playback will begin on all available DLNA renderers that support the specified MIME type.
+
+You can also control playback using voice commands or automate playback using Home Assistant scripts and automations.

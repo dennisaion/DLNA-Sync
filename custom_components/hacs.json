@@ -1,0 +1,14 @@
+{
+    "name": "DLNA Sync",
+    "description": "Play audio and video files in sync across multiple DLNA renderers",
+    "version": "1.0.0",
+    "authors": DennisAION,
+    "repository": "https://github.com/dennisaion/dlna-sync",
+    "category": "Integration",
+    "keywords": ["dlna", "media", "sync"],
+    "homepage": "https://github.com/dennisaion/dlna-sync",
+    "issues": "https://github.com/dennisaion/dlna-sync",
+    "manifest": "dlna_sync",
+    "config_flow": true,
+    "domain": "dlna_sync"
+}

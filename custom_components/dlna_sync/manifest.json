@@ -1,0 +1,31 @@
+{
+   "domain": "dlna_sync",
+   "name": "DLNA Sync",
+   "documentation": "https://github.com/dennisaion/dlna-sync",
+   "dependencies": [],
+   "codeowners": [],
+   "config_flow": true,
+   "zeroconf": [
+     "_dlna._tcp.local."
+   ],
+   "version": "1.0.0",
+   "requirements": [
+     "pydlna==0.5.3"
+   ],
+   "auto_start": true,
+   "config": {
+     "media_path": {
+       "name": "Media Path",
+       "description": "The file path to the media file to play",
+       "required": true,
+       "type": "string"
+     },
+     "mime_type": {
+       "name": "MIME Type",
+       "description": "The MIME type of the media file",
+       "required": true,
+       "type": "string",
+       "default": "video/mp4"
+     }
+   }
+}
