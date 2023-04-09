@@ -3,7 +3,7 @@
    "name": "DLNA Sync",
    "documentation": "https://github.com/dennisaion/dlna-sync",
    "dependencies": [],
-   "codeowners": dennisaion,
+   "codeowners": [dennisaion],
    "config_flow": true,
    "zeroconf": [
      "_dlna._tcp.local."
