@@ -1,0 +1,19 @@
+{
+    "config_flow": {
+        "step_user": {
+            "title": "DLNA Sync Configuration",
+            "submit": "Next",
+            "media_path": {
+                "error": {
+                    "required": "Media path is required"
+                }
+            },
+            "mime_type": {
+                "error": {
+                    "required": "MIME type is required",
+                    "invalid_choice": "Invalid MIME type selected"
+                }
+            }
+        }
+    }
+}
