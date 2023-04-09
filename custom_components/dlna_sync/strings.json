@@ -1,0 +1,18 @@
+{
+    "config": {
+        "media_path": {
+            "name": "Media path",
+            "description": "Enter the path to the media file to sync"
+        },
+        "mime_type": {
+            "name": "MIME type",
+            "description": "Select the MIME type of the media file"
+        }
+    },
+    "errors": {
+        "single_instance_allowed": {
+            "name": "Single instance allowed",
+            "description": "DLNA Sync is already configured in this instance of Home Assistant"
+        }
+    }
+}
