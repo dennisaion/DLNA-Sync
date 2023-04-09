@@ -14,7 +14,14 @@ class DLNASyncFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 
         # Present the user with a form to enter the media file path and MIME type
         if user_input is None:
-            return self.async_show_form(step_id="user", data_schema=DLNASyncFlowHandler.schema())
+            return self.async_show_form(
+                step_id="user",
+                data_schema=DLNASyncFlowHandler.schema(),
+                description_placeholders={
+                    "media_path_description": self._async_get_string("config.media_path.description"),
+                    "mime_type_description": self._async_get_string("config.mime_type.description")
+                }
+            )
 
         # Save the user's input as options for the component
         return self.async_create_entry(title="DLNA Sync", data=user_input)
@@ -25,8 +32,8 @@ class DLNASyncFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         """Return the schema for the user form."""
         return vol.Schema(
             {
-                vol.Required("media_path"): str,
-                vol.Required("mime_type"): vol.In(
+                vol.Required("media_path", description="media_path_description"): str,
+                vol.Required("mime_type", description="mime_type_description"): vol.In(
                     [
                         "audio/mp3",
                         "audio/flac",
@@ -35,7 +42,8 @@ class DLNASyncFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                         "video/mp4",
                         "video/avi",
                         "video/x-matroska",
-                    ]
+                    ],
+                    description="mime_type_description"
                 ),
             }
         )
