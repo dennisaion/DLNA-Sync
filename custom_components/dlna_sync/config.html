@@ -1,0 +1,41 @@
+<ha-config-section>
+  <span slot="header">DLNA Sync Configuration</span>
+  <span slot="introduction">
+    Please enter the media file path and MIME type to be synced across multiple DLNA renderers.
+  </span>
+
+  <ha-form>
+    <paper-input
+      label="Media path"
+      type="text"
+      name="media_path"
+      required
+      placeholder="/path/to/media"
+    >
+    </paper-input>
+    <span class="description">
+      The full path to the media file to be synced (e.g. /media/myvideo.mp4).
+    </span>
+
+    <paper-dropdown-menu
+      label="MIME type"
+      name="mime_type"
+      required
+    >
+      <paper-listbox slot="dropdown-content">
+        <paper-item value="audio/mp3">audio/mp3</paper-item>
+        <paper-item value="audio/flac">audio/flac</paper-item>
+        <paper-item value="audio/wav">audio/wav</paper-item>
+        <paper-item value="audio/x-m4a">audio/x-m4a</paper-item>
+        <paper-item value="video/mp4">video/mp4</paper-item>
+        <paper-item value="video/avi">video/avi</paper-item>
+        <paper-item value="video/x-matroska">video/x-matroska</paper-item>
+      </paper-listbox>
+    </paper-dropdown-menu>
+    <span class="description">
+      The MIME type of the media file to be synced (e.g. video/mp4).
+    </span>
+
+    <mwc-button raised type="submit">Submit</mwc-button>
+  </ha-form>
+</ha-config-section>
